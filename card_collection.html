@@ -1,0 +1,6784 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 12px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+    </style>
+    <script>
+        function searchTable() {
+            let input, filter, table, tr, td, i, j, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toLowerCase();
+            table = document.getElementById("cardTable");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 1; i < tr.length; i++) {
+                tr[i].style.display = "none";
+                td = tr[i].getElementsByTagName("td");
+                for (j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                        txtValue = td[j].textContent || td[j].innerText;
+                        if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+<h1>Lorcana Extra's</h1>
+<input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for cards..">
+
+<table id="cardTable">
+    <thead>
+        <tr>
+            <th>Normal</th>
+            <th>Foil</th>
+            <th>Name</th>
+            <th>Set</th>
+            <th>Card Number</th>
+            <th>Color</th>
+            <th>Rarity</th>
+            <th>Price</th>
+            <th>Foil Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>HeiHei - Boat Snack</td>
+            <td>1</td>
+            <td>7</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.26</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>LeFou - Bumbler</td>
+            <td>1</td>
+            <td>8</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.04</td>
+            <td>$0.33</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Minnie Mouse - Beloved Princess</td>
+            <td>1</td>
+            <td>13</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.22</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Pumbaa - Friendly Warthog</td>
+            <td>1</td>
+            <td>17</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.21</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Sebastian - Court Composer</td>
+            <td>1</td>
+            <td>19</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.26</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Simba - Protective Cub</td>
+            <td>1</td>
+            <td>20</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.31</td>
+            <td>$1.13</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Stitch - New Dog</td>
+            <td>1</td>
+            <td>22</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.08</td>
+            <td>$0.77</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Timon - Grub Rustler</td>
+            <td>1</td>
+            <td>24</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.09</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Be Our Guest</td>
+            <td>1</td>
+            <td>25</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.14</td>
+            <td>$0.70</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Healing Glow</td>
+            <td>1</td>
+            <td>28</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.28</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>You Have Forgotten Me</td>
+            <td>1</td>
+            <td>31</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.21</td>
+            <td>$1.83</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Anna - Heir to Arendelle</td>
+            <td>1</td>
+            <td>35</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.13</td>
+            <td>$0.41</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Archimedes - Highly Educated Owl</td>
+            <td>1</td>
+            <td>36</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.29</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Dr. Facilier - Charlatan</td>
+            <td>1</td>
+            <td>38</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.19</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Elsa - Queen Regent</td>
+            <td>1</td>
+            <td>40</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.40</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Jafar - Keeper of Secrets</td>
+            <td>1</td>
+            <td>44</td>
+            <td>Amethyst</td>
+            <td>Rare</td>
+            <td>$0.26</td>
+            <td>$1.74</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Jafar - Wicked Sorcerer</td>
+            <td>1</td>
+            <td>45</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.26</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Jetsam - Ursula's Spy</td>
+            <td>1</td>
+            <td>46</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.23</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Magic Broom - Bucket Brigade</td>
+            <td>1</td>
+            <td>47</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.38</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Maleficent - Sorceress</td>
+            <td>1</td>
+            <td>49</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.18</td>
+            <td>$1.73</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Olaf - Friendly Snowman</td>
+            <td>1</td>
+            <td>52</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.09</td>
+            <td>$1.36</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Pascal - Rapunzel's Companion</td>
+            <td>1</td>
+            <td>53</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.18</td>
+            <td>$1.94</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>The Wardrobe - Belle's Confidant</td>
+            <td>1</td>
+            <td>57</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>Tinker Bell - Peter Pan's Ally</td>
+            <td>1</td>
+            <td>58</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.37</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Yzma - Alchemist</td>
+            <td>1</td>
+            <td>60</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.23</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Freeze</td>
+            <td>1</td>
+            <td>63</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.27</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Friends on the Other Side</td>
+            <td>1</td>
+            <td>64</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.36</td>
+            <td>$4.71</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Aladdin - Prince Ali</td>
+            <td>1</td>
+            <td>69</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.25</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Cheshire Cat - Not All There</td>
+            <td>1</td>
+            <td>71</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.20</td>
+            <td>$0.73</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Duke of Weselton - Opportunistic Official</td>
+            <td>1</td>
+            <td>73</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.20</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Genie - The Ever Impressive</td>
+            <td>1</td>
+            <td>77</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.24</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Horace - No-Good Scoundrel</td>
+            <td>1</td>
+            <td>79</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.16</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Jasper - Common Crook</td>
+            <td>1</td>
+            <td>81</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.03</td>
+            <td>$0.32</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Megara - Pulling the Strings</td>
+            <td>1</td>
+            <td>87</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.21</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Peter Pan - Never Landing</td>
+            <td>1</td>
+            <td>91</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.20</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Tamatoa - Drab Little Crab</td>
+            <td>1</td>
+            <td>92</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.09</td>
+            <td>$0.37</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Tinker Bell - Most Helpful</td>
+            <td>1</td>
+            <td>93</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.11</td>
+            <td>$0.30</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Stampede</td>
+            <td>1</td>
+            <td>96</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Sudden Chill</td>
+            <td>1</td>
+            <td>98</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.15</td>
+            <td>$0.96</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Vicious Betrayal</td>
+            <td>1</td>
+            <td>100</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.25</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Stolen Scimitar</td>
+            <td>1</td>
+            <td>102</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.20</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Abu - Mischievous Monkey</td>
+            <td>1</td>
+            <td>103</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Aladdin - Street Rat</td>
+            <td>1</td>
+            <td>105</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.24</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Elsa - Ice Surfer</td>
+            <td>1</td>
+            <td>109</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.21</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Gaston - Arrogant Hunter</td>
+            <td>1</td>
+            <td>110</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.11</td>
+            <td>$0.47</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Goofy - Daredevil</td>
+            <td>1</td>
+            <td>111</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.24</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Minnie Mouse - Always Classy</td>
+            <td>1</td>
+            <td>116</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.35</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Moana - Chosen by the Ocean</td>
+            <td>1</td>
+            <td>117</td>
+            <td>Ruby</td>
+            <td>Uncommon</td>
+            <td>$0.06</td>
+            <td>$0.42</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Peter Pan - Fearless Fighter</td>
+            <td>1</td>
+            <td>119</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.19</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Pongo - Ol' Rascal</td>
+            <td>1</td>
+            <td>120</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.24</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Scar - Fiery Usurper</td>
+            <td>1</td>
+            <td>122</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Scar - Shameless Firebrand</td>
+            <td>1</td>
+            <td>123</td>
+            <td>Ruby</td>
+            <td>Rare</td>
+            <td>$0.21</td>
+            <td>$1.25</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Sergeant Tibbs - Courageous Cat</td>
+            <td>1</td>
+            <td>124</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Fan the Flames</td>
+            <td>1</td>
+            <td>131</td>
+            <td>Ruby</td>
+            <td>Uncommon</td>
+            <td>$0.10</td>
+            <td>$0.41</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Tangle</td>
+            <td>1</td>
+            <td>133</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.08</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Sword of Truth</td>
+            <td>1</td>
+            <td>136</td>
+            <td>Ruby</td>
+            <td>Rare</td>
+            <td>$0.14</td>
+            <td>$0.65</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Aurora - Briar Rose</td>
+            <td>1</td>
+            <td>138</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Belle - Inventive Engineer</td>
+            <td>1</td>
+            <td>141</td>
+            <td>Sapphire</td>
+            <td>Uncommon</td>
+            <td>$0.12</td>
+            <td>$0.60</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Chief Tui - Respected Leader</td>
+            <td>1</td>
+            <td>143</td>
+            <td>Sapphire</td>
+            <td>Uncommon</td>
+            <td>$0.07</td>
+            <td>$0.38</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Donald Duck - Strutting His Stuff</td>
+            <td>1</td>
+            <td>144</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.08</td>
+            <td>$0.26</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Flounder - Voice of Reason</td>
+            <td>1</td>
+            <td>145</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.24</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Gramma Tala - Storyteller</td>
+            <td>1</td>
+            <td>146</td>
+            <td>Sapphire</td>
+            <td>Uncommon</td>
+            <td>$0.15</td>
+            <td>$1.46</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Jasmine - Disguised</td>
+            <td>1</td>
+            <td>148</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.23</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Merlin - Self-Appointed Mentor</td>
+            <td>1</td>
+            <td>153</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.23</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Mickey Mouse - Detective</td>
+            <td>1</td>
+            <td>154</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.10</td>
+            <td>$0.51</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Philoctetes - Trainer of Heroes</td>
+            <td>1</td>
+            <td>156</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.24</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Develop Your Brain</td>
+            <td>1</td>
+            <td>161</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.10</td>
+            <td>$1.03</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Work Together</td>
+            <td>1</td>
+            <td>165</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.22</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Magic Golden Flower</td>
+            <td>1</td>
+            <td>169</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.26</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Aladdin - Cornered Swordsman</td>
+            <td>1</td>
+            <td>171</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.21</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Beast - Hardheaded</td>
+            <td>1</td>
+            <td>172</td>
+            <td>Steel</td>
+            <td>Uncommon</td>
+            <td>$0.08</td>
+            <td>$0.68</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Captain Hook - Forceful Duelist</td>
+            <td>1</td>
+            <td>174</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.10</td>
+            <td>$1.23</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Cerberus - Three-Headed Dog</td>
+            <td>1</td>
+            <td>176</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.25</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Goons - Maleficent's Underlings</td>
+            <td>1</td>
+            <td>179</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Hercules - True Hero</td>
+            <td>1</td>
+            <td>181</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.09</td>
+            <td>$0.23</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Kristoff - Official Ice Master</td>
+            <td>1</td>
+            <td>182</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.14</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Starkey - Hook's Henchman</td>
+            <td>1</td>
+            <td>191</td>
+            <td>Steel</td>
+            <td>Uncommon</td>
+            <td>$0.07</td>
+            <td>$0.38</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Tinker Bell - Tiny Tactician</td>
+            <td>1</td>
+            <td>194</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.12</td>
+            <td>$0.70</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>A Whole New World</td>
+            <td>1</td>
+            <td>195</td>
+            <td>Steel</td>
+            <td>Super Rare</td>
+            <td>$12.41</td>
+            <td>$22.93</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Break</td>
+            <td>1</td>
+            <td>196</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.21</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Fire the Cannons!</td>
+            <td>1</td>
+            <td>197</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.11</td>
+            <td>$0.60</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Beast's Mirror</td>
+            <td>1</td>
+            <td>201</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Bashful - Hopeless Romantic</td>
+            <td>2</td>
+            <td>1</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.05</td>
+            <td>$0.38</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Christopher Robin - Adventurer</td>
+            <td>2</td>
+            <td>2</td>
+            <td>Amber</td>
+            <td>Rare</td>
+            <td>$0.12</td>
+            <td>$0.63</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Cinderella - Ballroom Sensation</td>
+            <td>2</td>
+            <td>3</td>
+            <td>Amber</td>
+            <td>Rare</td>
+            <td>$4.16</td>
+            <td>$7.70</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Doc - Leader of the Seven Dwarfs</td>
+            <td>2</td>
+            <td>5</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.12</td>
+            <td>$1.55</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Dopey - Always Playful</td>
+            <td>2</td>
+            <td>6</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.06</td>
+            <td>$0.41</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Eudora - Accomplished Seamstress</td>
+            <td>2</td>
+            <td>7</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.14</td>
+        </tr>
+        
+        <tr>
+            <td>7</td>
+            <td>0</td>
+            <td>Gaston - Baritone Bully</td>
+            <td>2</td>
+            <td>8</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.04</td>
+            <td>$0.40</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Grand Duke - Advisor to the King</td>
+            <td>2</td>
+            <td>9</td>
+            <td>Amber</td>
+            <td>Rare</td>
+            <td>$0.16</td>
+            <td>$0.78</td>
+        </tr>
+        
+        <tr>
+            <td>7</td>
+            <td>0</td>
+            <td>Grumpy - Bad-Tempered</td>
+            <td>2</td>
+            <td>10</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.26</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Happy - Good-Natured</td>
+            <td>2</td>
+            <td>11</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.21</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Mulan - Free Spirit</td>
+            <td>2</td>
+            <td>15</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.19</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Nana - Darling Family Pet</td>
+            <td>2</td>
+            <td>17</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.06</td>
+            <td>$0.21</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Piglet - Very Small Animal</td>
+            <td>2</td>
+            <td>18</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Rapunzel - Sunshine</td>
+            <td>2</td>
+            <td>20</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.09</td>
+            <td>$0.31</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Sleepy - Nodding Off</td>
+            <td>2</td>
+            <td>21</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.24</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Sneezy - Very Allergic</td>
+            <td>2</td>
+            <td>22</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.19</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Snow White - Lost in the Forest</td>
+            <td>2</td>
+            <td>23</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.25</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Snow White - Unexpected Houseguest</td>
+            <td>2</td>
+            <td>24</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.16</td>
+            <td>$0.66</td>
+        </tr>
+        
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>The Queen - Commanding Presence</td>
+            <td>2</td>
+            <td>26</td>
+            <td>Amber</td>
+            <td>Super Rare</td>
+            <td>$1.23</td>
+            <td>$1.69</td>
+        </tr>
+        
+        <tr>
+            <td>7</td>
+            <td>0</td>
+            <td>The Queen - Regal Monarch</td>
+            <td>2</td>
+            <td>27</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.11</td>
+            <td>$1.03</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Hold Still</td>
+            <td>2</td>
+            <td>28</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.20</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Last Stand</td>
+            <td>2</td>
+            <td>29</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.05</td>
+            <td>$0.38</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Painting the Roses Red</td>
+            <td>2</td>
+            <td>30</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.50</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Chip the Teacup - Gentle Soul</td>
+            <td>2</td>
+            <td>37</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.19</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Dr. Facilier - Savvy Opportunist</td>
+            <td>2</td>
+            <td>38</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.15</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Elsa - Gloves Off</td>
+            <td>2</td>
+            <td>39</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.28</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Fairy Godmother - Pure Heart</td>
+            <td>2</td>
+            <td>42</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.25</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Jiminy Cricket - Pinocchio's Conscience</td>
+            <td>2</td>
+            <td>44</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Kuzco - Wanted Llama</td>
+            <td>2</td>
+            <td>45</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.53</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Madam Mim - Fox</td>
+            <td>2</td>
+            <td>46</td>
+            <td>Amethyst</td>
+            <td>Rare</td>
+            <td>$5.48</td>
+            <td>$14.95</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Merlin - Goat</td>
+            <td>2</td>
+            <td>51</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.28</td>
+            <td>$5.46</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Merlin - Squirrel</td>
+            <td>2</td>
+            <td>54</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.31</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Pinocchio - On the Run</td>
+            <td>2</td>
+            <td>57</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.09</td>
+            <td>$0.37</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Pinocchio - Talkative Puppet</td>
+            <td>2</td>
+            <td>58</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.24</td>
+            <td>$1.04</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Winnie the Pooh - Hunny Wizard</td>
+            <td>2</td>
+            <td>59</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.09</td>
+            <td>$0.77</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Yzma - Without Beauty Sleep</td>
+            <td>2</td>
+            <td>61</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.05</td>
+            <td>$0.28</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>I'm Stuck!</td>
+            <td>2</td>
+            <td>63</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.20</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Legend of the Sword in the Stone</td>
+            <td>2</td>
+            <td>64</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.22</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Binding Contract</td>
+            <td>2</td>
+            <td>65</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.06</td>
+            <td>$0.27</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Croquet Mallet</td>
+            <td>2</td>
+            <td>66</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.16</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Perplexing Signposts</td>
+            <td>2</td>
+            <td>67</td>
+            <td>Amethyst</td>
+            <td>Rare</td>
+            <td>$0.10</td>
+            <td>$0.43</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Arthur - Trained Swordsman</td>
+            <td>2</td>
+            <td>69</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.21</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Belle - Bookworm</td>
+            <td>2</td>
+            <td>71</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.11</td>
+            <td>$0.29</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Bucky - Squirrel Squeak Tutor</td>
+            <td>2</td>
+            <td>73</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.26</td>
+            <td>$4.04</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Donald Duck - Perfect Gentleman</td>
+            <td>2</td>
+            <td>77</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.14</td>
+            <td>$0.74</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Donald Duck - Sleepwalker</td>
+            <td>2</td>
+            <td>78</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Dr. Facilier - Fortune Teller</td>
+            <td>2</td>
+            <td>79</td>
+            <td>Emerald</td>
+            <td>Super Rare</td>
+            <td>$0.18</td>
+            <td>$0.52</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Enchantress - Unexpected Judge</td>
+            <td>2</td>
+            <td>80</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.28</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Flynn Rider - Confident Vagabond</td>
+            <td>2</td>
+            <td>81</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.08</td>
+            <td>$0.36</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Pain - Underworld Imp</td>
+            <td>2</td>
+            <td>86</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.07</td>
+            <td>$0.35</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Panic - Underworld Imp</td>
+            <td>2</td>
+            <td>87</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.19</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Pete - Bad Guy</td>
+            <td>2</td>
+            <td>88</td>
+            <td>Emerald</td>
+            <td>Rare</td>
+            <td>$0.23</td>
+            <td>$1.17</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Queen of Hearts - Quick-Tempered</td>
+            <td>2</td>
+            <td>90</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Ratigan - Criminal Mastermind</td>
+            <td>2</td>
+            <td>91</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Ray - Easygoing Firefly</td>
+            <td>2</td>
+            <td>92</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.25</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Tiana - True Princess</td>
+            <td>2</td>
+            <td>94</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.07</td>
+            <td>$0.40</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Virana - Fang Chief</td>
+            <td>2</td>
+            <td>95</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Hypnotize</td>
+            <td>2</td>
+            <td>98</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.27</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Improvise</td>
+            <td>2</td>
+            <td>99</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.22</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Ring the Bell</td>
+            <td>2</td>
+            <td>101</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.08</td>
+            <td>$0.32</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Baloo - Fun-Loving Bear</td>
+            <td>2</td>
+            <td>103</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.15</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Boun - Precocious Entrepreneur</td>
+            <td>2</td>
+            <td>104</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.15</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Felicia - Always Hungry</td>
+            <td>2</td>
+            <td>107</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.20</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Fidget - Ratigan's Henchman</td>
+            <td>2</td>
+            <td>108</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.10</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Lady Tremaine - Overbearing Matriarch</td>
+            <td>2</td>
+            <td>111</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Lumiere - Hotheaded Candelabra</td>
+            <td>2</td>
+            <td>112</td>
+            <td>Ruby</td>
+            <td>Rare</td>
+            <td>$0.13</td>
+            <td>$0.53</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Minnie Mouse - Stylish Surfer</td>
+            <td>2</td>
+            <td>113</td>
+            <td>Ruby</td>
+            <td>Uncommon</td>
+            <td>$0.30</td>
+            <td>$1.65</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Minnie Mouse - Zipping Around</td>
+            <td>2</td>
+            <td>115</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.15</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Mulan - Soldier in Training</td>
+            <td>2</td>
+            <td>117</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.22</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Namaari - Nemesis</td>
+            <td>2</td>
+            <td>118</td>
+            <td>Ruby</td>
+            <td>Super Rare</td>
+            <td>$0.15</td>
+            <td>$0.57</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Raya - Headstrong</td>
+            <td>2</td>
+            <td>122</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.14</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Raya - Warrior of Kumandra</td>
+            <td>2</td>
+            <td>124</td>
+            <td>Ruby</td>
+            <td>Uncommon</td>
+            <td>$0.04</td>
+            <td>$0.27</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Tigger - One of a Kind</td>
+            <td>2</td>
+            <td>127</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.19</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Go the Distance</td>
+            <td>2</td>
+            <td>129</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.26</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>The Most Diabolical Scheme</td>
+            <td>2</td>
+            <td>131</td>
+            <td>Ruby</td>
+            <td>Uncommon</td>
+            <td>$0.04</td>
+            <td>$0.26</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>What Did You Call Me?</td>
+            <td>2</td>
+            <td>132</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.13</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>You Can Fly!</td>
+            <td>2</td>
+            <td>133</td>
+            <td>Ruby</td>
+            <td>Uncommon</td>
+            <td>$0.06</td>
+            <td>$0.22</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Peter Pan's Dagger</td>
+            <td>2</td>
+            <td>135</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.10</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Basil - Of Baker Street</td>
+            <td>2</td>
+            <td>139</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.16</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Basil - Perceptive Investigator</td>
+            <td>2</td>
+            <td>140</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.14</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Caterpillar - Calm and Collected</td>
+            <td>2</td>
+            <td>141</td>
+            <td>Sapphire</td>
+            <td>Uncommon</td>
+            <td>$0.15</td>
+            <td>$0.48</td>
+        </tr>
+        
+        <tr>
+            <td>7</td>
+            <td>0</td>
+            <td>Cruella De Vil - Fashionable Cruiser</td>
+            <td>2</td>
+            <td>144</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.22</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Duke Weaselton - Small-Time Crook</td>
+            <td>2</td>
+            <td>146</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>Gaston - Intellectual Powerhouse</td>
+            <td>2</td>
+            <td>147</td>
+            <td>Sapphire</td>
+            <td>Rare</td>
+            <td>$0.20</td>
+            <td>$0.27</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Grand Pabbie - Oldest and Wisest</td>
+            <td>2</td>
+            <td>148</td>
+            <td>Sapphire</td>
+            <td>Super Rare</td>
+            <td>$0.33</td>
+            <td>$1.38</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Hiram Flaversham - Toymaker</td>
+            <td>2</td>
+            <td>149</td>
+            <td>Sapphire</td>
+            <td>Rare</td>
+            <td>$2.21</td>
+            <td>$16.42</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>James - Role Model</td>
+            <td>2</td>
+            <td>150</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Jasmine - Heir of Agrabah</td>
+            <td>2</td>
+            <td>151</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.08</td>
+            <td>$0.20</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Judy Hopps - Optimistic Officer</td>
+            <td>2</td>
+            <td>152</td>
+            <td>Sapphire</td>
+            <td>Uncommon</td>
+            <td>$0.08</td>
+            <td>$0.61</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Mrs. Judson - Housekeeper</td>
+            <td>2</td>
+            <td>153</td>
+            <td>Sapphire</td>
+            <td>Rare</td>
+            <td>$0.12</td>
+            <td>$0.55</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Nick Wilde - Wily Fox</td>
+            <td>2</td>
+            <td>154</td>
+            <td>Sapphire</td>
+            <td>Uncommon</td>
+            <td>$0.19</td>
+            <td>$0.52</td>
+        </tr>
+        
+        <tr>
+            <td>7</td>
+            <td>0</td>
+            <td>Owl - Logical Lecturer</td>
+            <td>2</td>
+            <td>156</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.16</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Rabbit - Reluctant Host</td>
+            <td>2</td>
+            <td>158</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>7</td>
+            <td>0</td>
+            <td>The Nokk - Water Spirit</td>
+            <td>2</td>
+            <td>160</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.16</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Winnie the Pooh - Having a Think</td>
+            <td>2</td>
+            <td>161</td>
+            <td>Sapphire</td>
+            <td>Rare</td>
+            <td>$0.22</td>
+            <td>$1.38</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Four Dozen Eggs</td>
+            <td>2</td>
+            <td>163</td>
+            <td>Sapphire</td>
+            <td>Uncommon</td>
+            <td>$0.04</td>
+            <td>$0.24</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Launch</td>
+            <td>2</td>
+            <td>164</td>
+            <td>Sapphire</td>
+            <td>Uncommon</td>
+            <td>$0.03</td>
+            <td>$0.23</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Nothing to Hide</td>
+            <td>2</td>
+            <td>165</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.25</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Fang Crossbow</td>
+            <td>2</td>
+            <td>166</td>
+            <td>Sapphire</td>
+            <td>Uncommon</td>
+            <td>$0.03</td>
+            <td>$0.24</td>
+        </tr>
+        
+        <tr>
+            <td>7</td>
+            <td>0</td>
+            <td>Gumbo Pot</td>
+            <td>2</td>
+            <td>167</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.15</td>
+        </tr>
+        
+        <tr>
+            <td>7</td>
+            <td>0</td>
+            <td>Pawpsicle</td>
+            <td>2</td>
+            <td>169</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.24</td>
+            <td>$4.87</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Benja - Guardian of the Dragon Gem</td>
+            <td>2</td>
+            <td>174</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.09</td>
+            <td>$0.68</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Cinderella - Knight in Training</td>
+            <td>2</td>
+            <td>176</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.25</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Cinderella - Stouthearted</td>
+            <td>2</td>
+            <td>177</td>
+            <td>Steel</td>
+            <td>Super Rare</td>
+            <td>$2.36</td>
+            <td>$4.82</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Donald Duck - Deep-Sea Diver</td>
+            <td>2</td>
+            <td>178</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.15</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Eli La Bouff - Big Daddy</td>
+            <td>2</td>
+            <td>179</td>
+            <td>Steel</td>
+            <td>Uncommon</td>
+            <td>$0.03</td>
+            <td>$0.20</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Hercules - Hero in Training</td>
+            <td>2</td>
+            <td>182</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.26</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Jafar - Dreadnought</td>
+            <td>2</td>
+            <td>183</td>
+            <td>Steel</td>
+            <td>Uncommon</td>
+            <td>$0.28</td>
+            <td>$2.33</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Jafar - Royal Vizier</td>
+            <td>2</td>
+            <td>184</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.08</td>
+            <td>$0.36</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Lawrence - Jealous Manservant</td>
+            <td>2</td>
+            <td>186</td>
+            <td>Steel</td>
+            <td>Uncommon</td>
+            <td>$0.06</td>
+            <td>$0.57</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Li Shang - Archery Instructor</td>
+            <td>2</td>
+            <td>187</td>
+            <td>Steel</td>
+            <td>Uncommon</td>
+            <td>$0.09</td>
+            <td>$0.38</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Magic Broom - Industrial Model</td>
+            <td>2</td>
+            <td>188</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.11</td>
+            <td>$0.28</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Pacha - Village Leader</td>
+            <td>2</td>
+            <td>190</td>
+            <td>Steel</td>
+            <td>Uncommon</td>
+            <td>$0.05</td>
+            <td>$0.20</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Prince Naveen - Penniless Royal</td>
+            <td>2</td>
+            <td>191</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.15</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Tiana - Celebrating Princess</td>
+            <td>2</td>
+            <td>196</td>
+            <td>Steel</td>
+            <td>Super Rare</td>
+            <td>$0.19</td>
+            <td>$0.27</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Tiana - Diligent Waitress</td>
+            <td>2</td>
+            <td>197</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.20</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Charge!</td>
+            <td>2</td>
+            <td>198</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.14</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Let the Storm Rage On</td>
+            <td>2</td>
+            <td>199</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.52</td>
+            <td>$2.71</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Pick a Fight</td>
+            <td>2</td>
+            <td>200</td>
+            <td>Steel</td>
+            <td>Uncommon</td>
+            <td>$0.08</td>
+            <td>$0.32</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Strength of a Raging Fire</td>
+            <td>2</td>
+            <td>201</td>
+            <td>Steel</td>
+            <td>Rare</td>
+            <td>$4.65</td>
+            <td>$11.32</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Last Cannon</td>
+            <td>2</td>
+            <td>202</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.21</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Mouse Armor</td>
+            <td>2</td>
+            <td>203</td>
+            <td>Steel</td>
+            <td>Uncommon</td>
+            <td>$0.07</td>
+            <td>$0.36</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Joshua Sweet - The Doctor</td>
+            <td>3</td>
+            <td>5</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.16</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Kida - Atlantean</td>
+            <td>3</td>
+            <td>6</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.36</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Miss Bianca - Rescue Aid Society Agent</td>
+            <td>3</td>
+            <td>10</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.16</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Mr. Snoops - Inept Businessman</td>
+            <td>3</td>
+            <td>11</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.12</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Orville - Ace Pilot</td>
+            <td>3</td>
+            <td>13</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.13</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Wendy Darling - Talented Sailor</td>
+            <td>3</td>
+            <td>23</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.06</td>
+            <td>$0.29</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Boss's Orders</td>
+            <td>3</td>
+            <td>25</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.13</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Heal What Has Been Hurt</td>
+            <td>3</td>
+            <td>26</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.25</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Quick Patch</td>
+            <td>3</td>
+            <td>27</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.11</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Cleansing Rainwater</td>
+            <td>3</td>
+            <td>29</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.22</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Wildcat's Wrench</td>
+            <td>3</td>
+            <td>31</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.03</td>
+            <td>$0.19</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Never Land - Mermaid Lagoon</td>
+            <td>3</td>
+            <td>32</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.19</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Tiana's Palace - Jazz Restaurant</td>
+            <td>3</td>
+            <td>34</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.08</td>
+            <td>$0.29</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Diablo - Faithful Pet</td>
+            <td>3</td>
+            <td>37</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.22</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Iago - Pretty Polly</td>
+            <td>3</td>
+            <td>40</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.21</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Lena Sabrewing - Rebellious Teenager</td>
+            <td>3</td>
+            <td>43</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.14</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Magic Carpet - Flying Rug</td>
+            <td>3</td>
+            <td>47</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.22</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Magica De Spell - Ambitious Witch</td>
+            <td>3</td>
+            <td>48</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Magica De Spell - Thieving Sorceress</td>
+            <td>3</td>
+            <td>50</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.05</td>
+            <td>$0.23</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Mama Odie - Voice of Wisdom</td>
+            <td>3</td>
+            <td>52</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.05</td>
+            <td>$0.23</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>The Queen - Hateful Rival</td>
+            <td>3</td>
+            <td>57</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.14</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Bestow a Gift</td>
+            <td>3</td>
+            <td>60</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.16</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Last-Ditch Effort</td>
+            <td>3</td>
+            <td>62</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.06</td>
+            <td>$0.29</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Forbidden Mountain - Maleficent's Castle</td>
+            <td>3</td>
+            <td>66</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.15</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Don Karnage - Prince of Pirates</td>
+            <td>3</td>
+            <td>71</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.15</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Flotsam - Riffraff</td>
+            <td>3</td>
+            <td>72</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.16</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Milo Thatch - Clever Cartographer</td>
+            <td>3</td>
+            <td>79</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.14</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Sir Hiss - Aggravating Asp</td>
+            <td>3</td>
+            <td>86</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.27</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Skippy - Energetic Rabbit</td>
+            <td>3</td>
+            <td>87</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.11</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Zazu - Steward of the Pride Lands</td>
+            <td>3</td>
+            <td>93</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Airfoil</td>
+            <td>3</td>
+            <td>97</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Robin's Bow</td>
+            <td>3</td>
+            <td>98</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.09</td>
+            <td>$0.33</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>De Vil Manor - Cruella's Estate</td>
+            <td>3</td>
+            <td>100</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Jim Hawkins - Thrill Seeker</td>
+            <td>3</td>
+            <td>110</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.14</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Nutsy - Vulture Henchman</td>
+            <td>3</td>
+            <td>118</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.11</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Peter Pan - Never Land Hero</td>
+            <td>3</td>
+            <td>119</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.11</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Slightly - Lost Boy</td>
+            <td>3</td>
+            <td>124</td>
+            <td>Ruby</td>
+            <td>Uncommon</td>
+            <td>$0.04</td>
+            <td>$0.20</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Stitch - Little Rocket</td>
+            <td>3</td>
+            <td>125</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.23</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Trigger - Not-So-Sharp Shooter</td>
+            <td>3</td>
+            <td>126</td>
+            <td>Ruby</td>
+            <td>Uncommon</td>
+            <td>$0.04</td>
+            <td>$0.19</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Webby Vanderquack - Enthusiastic Duck</td>
+            <td>3</td>
+            <td>127</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.13</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Divebomb</td>
+            <td>3</td>
+            <td>128</td>
+            <td>Ruby</td>
+            <td>Uncommon</td>
+            <td>$0.05</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>I've Got a Dream</td>
+            <td>3</td>
+            <td>129</td>
+            <td>Ruby</td>
+            <td>Uncommon</td>
+            <td>$0.05</td>
+            <td>$0.23</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Voyage</td>
+            <td>3</td>
+            <td>131</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.16</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Agrabah - Marketplace</td>
+            <td>3</td>
+            <td>134</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.24</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Captain Amelia - First In Command</td>
+            <td>3</td>
+            <td>138</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.13</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Dewey - Showy Nephew</td>
+            <td>3</td>
+            <td>139</td>
+            <td>Sapphire</td>
+            <td>Uncommon</td>
+            <td>$0.06</td>
+            <td>$0.21</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Genie - Cramped in the Lamp</td>
+            <td>3</td>
+            <td>141</td>
+            <td>Sapphire</td>
+            <td>Uncommon</td>
+            <td>$0.06</td>
+            <td>$0.27</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Gramma Tala - Keeper of Ancient Stories</td>
+            <td>3</td>
+            <td>142</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.08</td>
+            <td>$0.57</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>King Louie - Bandleader</td>
+            <td>3</td>
+            <td>146</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.13</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Kit Cloudkicker - Navigator</td>
+            <td>3</td>
+            <td>147</td>
+            <td>Sapphire</td>
+            <td>Uncommon</td>
+            <td>$0.06</td>
+            <td>$0.35</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Maid Marian - Delightful Dreamer</td>
+            <td>3</td>
+            <td>150</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.28</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Pluto - Mickey's Clever Friend</td>
+            <td>3</td>
+            <td>152</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.14</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Rufus - Orphanage Cat</td>
+            <td>3</td>
+            <td>153</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.12</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Distract</td>
+            <td>3</td>
+            <td>159</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.13</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>McDuck Manor - Scrooge's Mansion</td>
+            <td>3</td>
+            <td>169</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.08</td>
+            <td>$0.42</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Eeyore - Overstuffed Donkey</td>
+            <td>3</td>
+            <td>172</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.09</td>
+            <td>$0.25</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Kida - Royal Warrior</td>
+            <td>3</td>
+            <td>177</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.25</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Minnie Mouse - Funky Spelunker</td>
+            <td>3</td>
+            <td>183</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.16</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Mr. Smee - Bumbling Mate</td>
+            <td>3</td>
+            <td>184</td>
+            <td>Steel</td>
+            <td>Uncommon</td>
+            <td>$0.75</td>
+            <td>$4.58</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Razoul - Palace Guard</td>
+            <td>3</td>
+            <td>188</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.19</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Robin Hood - Beloved Outlaw</td>
+            <td>3</td>
+            <td>189</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.13</td>
+            <td>$1.50</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Ba-boom!</td>
+            <td>3</td>
+            <td>196</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.12</td>
+            <td>$0.67</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Captain Hook's Rapier</td>
+            <td>3</td>
+            <td>199</td>
+            <td>Steel</td>
+            <td>Uncommon</td>
+            <td>$0.06</td>
+            <td>$0.23</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Nottingham - Prince John's Castle</td>
+            <td>3</td>
+            <td>203</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.09</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Agustin Madrigal - Clumsy Dad</td>
+            <td>4</td>
+            <td>1</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.15</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Ariel - Singing Mermaid</td>
+            <td>4</td>
+            <td>3</td>
+            <td>Amber</td>
+            <td>Rare</td>
+            <td>$0.15</td>
+            <td>$1.13</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Cogsworth - Majordomo</td>
+            <td>4</td>
+            <td>5</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.10</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Daisy Duck - Lovely Lady</td>
+            <td>4</td>
+            <td>6</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.04</td>
+            <td>$0.24</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Daisy Duck - Musketeer Spy</td>
+            <td>4</td>
+            <td>7</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.19</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Donald Duck - Musketeer Soldier</td>
+            <td>4</td>
+            <td>8</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.22</td>
+            <td>$1.17</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Félix Madrigal - Fun-Loving Family Man</td>
+            <td>4</td>
+            <td>9</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.05</td>
+            <td>$0.21</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Golden Harp - Enchanter of the Land</td>
+            <td>4</td>
+            <td>11</td>
+            <td>Amber</td>
+            <td>Rare</td>
+            <td>$0.20</td>
+            <td>$1.33</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Goofy - Musketeer Swordsman</td>
+            <td>4</td>
+            <td>12</td>
+            <td>Amber</td>
+            <td>Rare</td>
+            <td>$0.12</td>
+            <td>$0.44</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Julieta Madrigal - Excellent Cook</td>
+            <td>4</td>
+            <td>13</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.14</td>
+            <td>$1.04</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Max - Loyal Sheepdog</td>
+            <td>4</td>
+            <td>14</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.10</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Mickey Mouse - Leader of the Band</td>
+            <td>4</td>
+            <td>15</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.03</td>
+            <td>$0.24</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>Minnie Mouse - Musketeer Champion</td>
+            <td>4</td>
+            <td>17</td>
+            <td>Amber</td>
+            <td>Super Rare</td>
+            <td>$0.17</td>
+            <td>$1.12</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Mirabel Madrigal - Gift of the Family</td>
+            <td>4</td>
+            <td>18</td>
+            <td>Amber</td>
+            <td>Super Rare</td>
+            <td>$0.13</td>
+            <td>$0.34</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Mirabel Madrigal - Prophecy Finder</td>
+            <td>4</td>
+            <td>19</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.15</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Pluto - Rescue Dog</td>
+            <td>4</td>
+            <td>20</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.10</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Prince Eric - Seafaring Prince</td>
+            <td>4</td>
+            <td>21</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>6</td>
+            <td>0</td>
+            <td>Prince Eric - Ursula's Groom</td>
+            <td>4</td>
+            <td>22</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.06</td>
+            <td>$0.32</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Stitch - Alien Dancer</td>
+            <td>4</td>
+            <td>23</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.15</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Ursula - Vanessa</td>
+            <td>4</td>
+            <td>25</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.09</td>
+            <td>$0.48</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Bruno's Return</td>
+            <td>4</td>
+            <td>26</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.07</td>
+            <td>$0.24</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>First Aid</td>
+            <td>4</td>
+            <td>27</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.11</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Lost In The Woods</td>
+            <td>4</td>
+            <td>29</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.05</td>
+            <td>$0.25</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Sign The Scroll</td>
+            <td>4</td>
+            <td>30</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.04</td>
+            <td>$0.12</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Record Player</td>
+            <td>4</td>
+            <td>32</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.16</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Atlantica - Concert Hall</td>
+            <td>4</td>
+            <td>33</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.12</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Antonio Madrigal - Animal Expert</td>
+            <td>4</td>
+            <td>35</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.03</td>
+            <td>$0.27</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Belle - Untrained Mystic</td>
+            <td>4</td>
+            <td>37</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.16</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Bruno Madrigal - Undetected Uncle</td>
+            <td>4</td>
+            <td>39</td>
+            <td>Amethyst</td>
+            <td>Super Rare</td>
+            <td>$1.11</td>
+            <td>$2.66</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Camilo Madrigal - Prankster</td>
+            <td>4</td>
+            <td>40</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.06</td>
+            <td>$0.26</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Dolores Madrigal - Easy Listener</td>
+            <td>4</td>
+            <td>41</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.34</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Flotsam - Ursula's "Baby"</td>
+            <td>4</td>
+            <td>43</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.10</td>
+            <td>$0.22</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Flotsam & Jetsam - Entangling Eels</td>
+            <td>4</td>
+            <td>44</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.10</td>
+            <td>$0.35</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Jetsam - Ursula's "Baby"</td>
+            <td>4</td>
+            <td>46</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.12</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Luisa Madrigal - Magically Strong One</td>
+            <td>4</td>
+            <td>47</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.14</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Magic Broom - Illuminary Keeper</td>
+            <td>4</td>
+            <td>48</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.18</td>
+            <td>$1.29</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Magic Broom - Lively Sweeper</td>
+            <td>4</td>
+            <td>49</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.14</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Magical Maid - Feather Duster</td>
+            <td>4</td>
+            <td>50</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.04</td>
+            <td>$0.23</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Marshmallow - Terrifying Snowman</td>
+            <td>4</td>
+            <td>51</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.03</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Mrs. Potts - Enchanted Teapot</td>
+            <td>4</td>
+            <td>52</td>
+            <td>Amethyst</td>
+            <td>Rare</td>
+            <td>$0.08</td>
+            <td>$0.39</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Pepa Madrigal - Weather Maker</td>
+            <td>4</td>
+            <td>53</td>
+            <td>Amethyst</td>
+            <td>Rare</td>
+            <td>$0.08</td>
+            <td>$0.37</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Peter Pan - Shadow Finder</td>
+            <td>4</td>
+            <td>54</td>
+            <td>Amethyst</td>
+            <td>Super Rare</td>
+            <td>$0.33</td>
+            <td>$2.44</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Pico - Helpful Toucan</td>
+            <td>4</td>
+            <td>55</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.09</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Tick-Tock - Ever-Present Pursuer</td>
+            <td>4</td>
+            <td>56</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.11</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Ursula - Mad Sea Witch</td>
+            <td>4</td>
+            <td>57</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.10</td>
+            <td>$0.32</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Poor Unfortunate Souls</td>
+            <td>4</td>
+            <td>60</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.21</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Second Star To The Right</td>
+            <td>4</td>
+            <td>61</td>
+            <td>Amethyst</td>
+            <td>Rare</td>
+            <td>$0.15</td>
+            <td>$0.82</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>1</td>
+            <td>Swing Into Action</td>
+            <td>4</td>
+            <td>62</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.12</td>
+        </tr>
+        
+        <tr>
+            <td>6</td>
+            <td>0</td>
+            <td>Ursula's Plan</td>
+            <td>4</td>
+            <td>63</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.05</td>
+            <td>$0.14</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Rose Lantern</td>
+            <td>4</td>
+            <td>65</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.12</td>
+        </tr>
+        
+        <tr>
+            <td>6</td>
+            <td>0</td>
+            <td>Triton's Trident</td>
+            <td>4</td>
+            <td>66</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.05</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Casa Madrigal - Casita</td>
+            <td>4</td>
+            <td>67</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Ursula's Lair - Eye of the Storm</td>
+            <td>4</td>
+            <td>68</td>
+            <td>Amethyst</td>
+            <td>Rare</td>
+            <td>$0.15</td>
+            <td>$0.61</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Cri-Kee - Lucky Cricket</td>
+            <td>4</td>
+            <td>69</td>
+            <td>Emerald</td>
+            <td>Rare</td>
+            <td>$0.38</td>
+            <td>$1.70</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Diablo - Maleficent's Spy</td>
+            <td>4</td>
+            <td>71</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.63</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Gunther - Interior Designer</td>
+            <td>4</td>
+            <td>72</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.08</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Gus - Champion of Cheese</td>
+            <td>4</td>
+            <td>73</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.12</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>HeiHei - Bumbling Rooster</td>
+            <td>4</td>
+            <td>75</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.11</td>
+            <td>$0.35</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Jaq - Connoisseur of Climbing</td>
+            <td>4</td>
+            <td>77</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.22</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Jasmine - Desert Warrior</td>
+            <td>4</td>
+            <td>78</td>
+            <td>Emerald</td>
+            <td>Rare</td>
+            <td>$0.19</td>
+            <td>$0.61</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Megara - Captivating Cynic</td>
+            <td>4</td>
+            <td>79</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.24</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Megara - Liberated One</td>
+            <td>4</td>
+            <td>80</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.05</td>
+            <td>$0.29</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Pain - Immortal Sidekick</td>
+            <td>4</td>
+            <td>81</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.04</td>
+            <td>$0.27</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Panic - Immortal Sidekick</td>
+            <td>4</td>
+            <td>82</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.04</td>
+            <td>$0.22</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Pegasus - Cloud Racer</td>
+            <td>4</td>
+            <td>83</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.17</td>
+            <td>$1.75</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Pegasus - Gift for Hercules</td>
+            <td>4</td>
+            <td>84</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.13</td>
+            <td>$0.51</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Pete - Born to Cheat</td>
+            <td>4</td>
+            <td>85</td>
+            <td>Emerald</td>
+            <td>Super Rare</td>
+            <td>$0.13</td>
+            <td>$0.58</td>
+        </tr>
+        
+        <tr>
+            <td>6</td>
+            <td>0</td>
+            <td>Pete - Rotten Guy</td>
+            <td>4</td>
+            <td>86</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.03</td>
+            <td>$0.29</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Prince Phillip - Vanquisher of Foes</td>
+            <td>4</td>
+            <td>87</td>
+            <td>Emerald</td>
+            <td>Super Rare</td>
+            <td>$0.19</td>
+            <td>$0.92</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>The Fates - Only One Eye</td>
+            <td>4</td>
+            <td>89</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.12</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>The Muses - Proclaimers of Heroes</td>
+            <td>4</td>
+            <td>90</td>
+            <td>Emerald</td>
+            <td>Rare</td>
+            <td>$0.52</td>
+            <td>$2.75</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Tor - Florist</td>
+            <td>4</td>
+            <td>91</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.20</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Dodge!</td>
+            <td>4</td>
+            <td>93</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Make The Potion</td>
+            <td>4</td>
+            <td>94</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.14</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Under The Sea</td>
+            <td>4</td>
+            <td>95</td>
+            <td>Emerald</td>
+            <td>Rare</td>
+            <td>$0.52</td>
+            <td>$2.85</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Ursula's Trickery</td>
+            <td>4</td>
+            <td>96</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.07</td>
+            <td>$0.28</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Hidden Inkcaster</td>
+            <td>4</td>
+            <td>98</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>6</td>
+            <td>0</td>
+            <td>Signed Contract</td>
+            <td>4</td>
+            <td>99</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.06</td>
+            <td>$0.26</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Vision Slab</td>
+            <td>4</td>
+            <td>100</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.10</td>
+            <td>$0.31</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Hidden Cove - Tranquil Haven</td>
+            <td>4</td>
+            <td>101</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.26</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Benja - Bold Uniter</td>
+            <td>4</td>
+            <td>104</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.09</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Fa Zhou - Mulan's Father</td>
+            <td>4</td>
+            <td>105</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.13</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Flynn Rider - Frenemy</td>
+            <td>4</td>
+            <td>106</td>
+            <td>Ruby</td>
+            <td>Super Rare</td>
+            <td>$3.23</td>
+            <td>$9.84</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Hercules - Clumsy Kid</td>
+            <td>4</td>
+            <td>108</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Li Shang - General's Son</td>
+            <td>4</td>
+            <td>111</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.12</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Mulan - Injured Soldier</td>
+            <td>4</td>
+            <td>116</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.38</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Pegasus - Flying Steed</td>
+            <td>4</td>
+            <td>120</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.32</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Raya - Fierce Protector</td>
+            <td>4</td>
+            <td>121</td>
+            <td>Ruby</td>
+            <td>Super Rare</td>
+            <td>$0.17</td>
+            <td>$0.64</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Raya - Guardian of the Dragon Gem</td>
+            <td>4</td>
+            <td>122</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.09</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Sisu - Emboldened Warrior</td>
+            <td>4</td>
+            <td>124</td>
+            <td>Ruby</td>
+            <td>Rare</td>
+            <td>$3.44</td>
+            <td>$9.21</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Tong - Survivor</td>
+            <td>4</td>
+            <td>126</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.12</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Be King Undisputed</td>
+            <td>4</td>
+            <td>129</td>
+            <td>Ruby</td>
+            <td>Rare</td>
+            <td>$1.17</td>
+            <td>$5.76</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Brawl</td>
+            <td>4</td>
+            <td>130</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.27</td>
+            <td>$2.02</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>The Plank</td>
+            <td>4</td>
+            <td>133</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.13</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Vitalisphere</td>
+            <td>4</td>
+            <td>134</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.35</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Training Grounds - Impossible Pillar</td>
+            <td>4</td>
+            <td>136</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.11</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Anna - Braving the Storm</td>
+            <td>4</td>
+            <td>137</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.20</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Ariel - Treasure Collector</td>
+            <td>4</td>
+            <td>139</td>
+            <td>Sapphire</td>
+            <td>Super Rare</td>
+            <td>$0.88</td>
+            <td>$4.95</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Aurora - Tranquil Princess</td>
+            <td>4</td>
+            <td>141</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.15</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Dang Hu - Talon Chief</td>
+            <td>4</td>
+            <td>142</td>
+            <td>Sapphire</td>
+            <td>Rare</td>
+            <td>$0.07</td>
+            <td>$0.27</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Fa Li - Mulan's Mother</td>
+            <td>4</td>
+            <td>143</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.12</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Hans - Noble Scoundrel</td>
+            <td>4</td>
+            <td>146</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.22</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Iduna - Caring Mother</td>
+            <td>4</td>
+            <td>147</td>
+            <td>Sapphire</td>
+            <td>Uncommon</td>
+            <td>$0.04</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>John Silver - Terror of the Realm</td>
+            <td>4</td>
+            <td>148</td>
+            <td>Sapphire</td>
+            <td>Rare</td>
+            <td>$0.08</td>
+            <td>$0.43</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Olaf - Trusting Companion</td>
+            <td>4</td>
+            <td>150</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.13</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Pascal - Inquisitive Pet</td>
+            <td>4</td>
+            <td>151</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.14</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Transformed Chef - Castle Stove</td>
+            <td>4</td>
+            <td>157</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.01</td>
+            <td>$0.15</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Triton - Discerning King</td>
+            <td>4</td>
+            <td>159</td>
+            <td>Sapphire</td>
+            <td>Rare</td>
+            <td>$0.20</td>
+            <td>$0.86</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Tuk Tuk - Curious Partner</td>
+            <td>4</td>
+            <td>161</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.02</td>
+            <td>$0.15</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Glean</td>
+            <td>4</td>
+            <td>163</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.19</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Seldom All They Seem</td>
+            <td>4</td>
+            <td>164</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.14</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Ice Block</td>
+            <td>4</td>
+            <td>168</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.09</td>
+            <td>$0.51</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Ariel's Grotto - A Secret Place</td>
+            <td>4</td>
+            <td>169</td>
+            <td>Sapphire</td>
+            <td>Rare</td>
+            <td>$0.18</td>
+            <td>$0.47</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Winter Camp - Medical Tent</td>
+            <td>4</td>
+            <td>170</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.08</td>
+            <td>$0.15</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Aladdin - Resolute Swordsman</td>
+            <td>4</td>
+            <td>172</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Arges - The Cyclops</td>
+            <td>4</td>
+            <td>173</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.08</td>
+            <td>$0.24</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Ariel - Determined Mermaid</td>
+            <td>4</td>
+            <td>174</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.20</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Ariel - Sonic Warrior</td>
+            <td>4</td>
+            <td>175</td>
+            <td>Steel</td>
+            <td>Super Rare</td>
+            <td>$0.48</td>
+            <td>$2.63</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Beast - Thick-Skinned</td>
+            <td>4</td>
+            <td>176</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.20</td>
+        </tr>
+        
+        <tr>
+            <td>6</td>
+            <td>0</td>
+            <td>Chien-Po - Imperial Soldier</td>
+            <td>4</td>
+            <td>178</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.25</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>LeFou - Opportunistic Flunky</td>
+            <td>4</td>
+            <td>181</td>
+            <td>Steel</td>
+            <td>Rare</td>
+            <td>$0.10</td>
+            <td>$0.58</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Luisa Madrigal - Rock of the Family</td>
+            <td>4</td>
+            <td>184</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.12</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Magic Broom - Aerial Cleaner</td>
+            <td>4</td>
+            <td>185</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.09</td>
+            <td>$0.36</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Mickey Mouse - Standard Bearer</td>
+            <td>4</td>
+            <td>188</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.23</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Piglet - Sturdy Swordsman</td>
+            <td>4</td>
+            <td>191</td>
+            <td>Steel</td>
+            <td>Legendary</td>
+            <td>$1.57</td>
+            <td>$5.41</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Rajah - Royal Protector</td>
+            <td>4</td>
+            <td>192</td>
+            <td>Steel</td>
+            <td>Rare</td>
+            <td>$0.10</td>
+            <td>$0.32</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Raya - Unstoppable Force</td>
+            <td>4</td>
+            <td>193</td>
+            <td>Steel</td>
+            <td>Super Rare</td>
+            <td>$0.13</td>
+            <td>$0.61</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Yao - Imperial Soldier</td>
+            <td>4</td>
+            <td>194</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.13</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>One Last Hope</td>
+            <td>4</td>
+            <td>197</td>
+            <td>Steel</td>
+            <td>Rare</td>
+            <td>$0.19</td>
+            <td>$0.57</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Triton's Decree</td>
+            <td>4</td>
+            <td>199</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.14</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Fortisphere</td>
+            <td>4</td>
+            <td>200</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.18</td>
+            <td>$0.89</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>The Wall - Border Fortress</td>
+            <td>4</td>
+            <td>203</td>
+            <td>Steel</td>
+            <td>Rare</td>
+            <td>$0.21</td>
+            <td>$0.40</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Thebes - The Big Olive</td>
+            <td>4</td>
+            <td>204</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Nala - Mischievous Cub</td>
+            <td>5</td>
+            <td>2</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.06</td>
+            <td>$0.29</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Rutt - Northern Moose</td>
+            <td>5</td>
+            <td>4</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Kenai - Big Brother</td>
+            <td>5</td>
+            <td>5</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Vanellope von Schweetz - Sugar Rush Champ</td>
+            <td>5</td>
+            <td>6</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.29</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Tuke - Northern Moose</td>
+            <td>5</td>
+            <td>7</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.30</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Lilo - Junior Cake Decorator</td>
+            <td>5</td>
+            <td>8</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.28</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Vanellope von Schweetz - Candy Mechanic</td>
+            <td>5</td>
+            <td>9</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.19</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Fix-It Felix, Jr. - Trusty Builder</td>
+            <td>5</td>
+            <td>10</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.16</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Gazelle - Pop Star</td>
+            <td>5</td>
+            <td>11</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.16</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Fix-It Felix, Jr. - Niceland Steward</td>
+            <td>5</td>
+            <td>12</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.07</td>
+            <td>$0.66</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Kristoff - Reindeer Keeper</td>
+            <td>5</td>
+            <td>13</td>
+            <td>Amber</td>
+            <td>Rare</td>
+            <td>$0.22</td>
+            <td>$0.66</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Minnie Mouse - Drum Major</td>
+            <td>5</td>
+            <td>15</td>
+            <td>Amber</td>
+            <td>Super Rare</td>
+            <td>$0.35</td>
+            <td>$2.10</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Daisy Duck - Donald's Date</td>
+            <td>5</td>
+            <td>16</td>
+            <td>Amber</td>
+            <td>Super Rare</td>
+            <td>$17.86</td>
+            <td>$25.81</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Fix-It Felix, Jr. - Delighted Sightseer</td>
+            <td>5</td>
+            <td>17</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.16</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Moana - Determined Explorer</td>
+            <td>5</td>
+            <td>18</td>
+            <td>Amber</td>
+            <td>Rare</td>
+            <td>$0.18</td>
+            <td>$0.74</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Vanellope von Schweetz - Sugar Rush Princess</td>
+            <td>5</td>
+            <td>19</td>
+            <td>Amber</td>
+            <td>Rare</td>
+            <td>$0.20</td>
+            <td>$2.95</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Alan-a-Dale - Rockin' Rooster</td>
+            <td>5</td>
+            <td>20</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.20</td>
+            <td>$1.81</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Wreck-It Ralph - Admiral Underpants</td>
+            <td>5</td>
+            <td>21</td>
+            <td>Amber</td>
+            <td>Rare</td>
+            <td>$0.20</td>
+            <td>$1.21</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Maid Marian - Lady of the Lists</td>
+            <td>5</td>
+            <td>22</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.07</td>
+            <td>$0.76</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Sven - Reindeer Steed</td>
+            <td>5</td>
+            <td>23</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.10</td>
+            <td>$0.44</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Minnie Mouse - Compassionate Friend</td>
+            <td>5</td>
+            <td>24</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Try Everything</td>
+            <td>5</td>
+            <td>25</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.10</td>
+            <td>$0.27</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Healing Touch</td>
+            <td>5</td>
+            <td>26</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.21</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Invited to the Ball</td>
+            <td>5</td>
+            <td>29</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.09</td>
+            <td>$0.33</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Healing Decanter</td>
+            <td>5</td>
+            <td>30</td>
+            <td>Amber</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.19</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Amber Chromicon</td>
+            <td>5</td>
+            <td>32</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.10</td>
+            <td>$0.55</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Rapunzel's Tower - Secluded Prison</td>
+            <td>5</td>
+            <td>33</td>
+            <td>Amber</td>
+            <td>Uncommon</td>
+            <td>$0.18</td>
+            <td>$0.69</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Pride Lands - Jungle Oasis</td>
+            <td>5</td>
+            <td>34</td>
+            <td>Amber</td>
+            <td>Rare</td>
+            <td>$0.27</td>
+            <td>$0.94</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>The Nokk - Mythical Spirit</td>
+            <td>5</td>
+            <td>36</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.13</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Cogsworth - Illuminary Watchman</td>
+            <td>5</td>
+            <td>37</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.19</td>
+            <td>$1.12</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Merlin - Turtle</td>
+            <td>5</td>
+            <td>38</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.28</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Archimedes - Exasperated Owl</td>
+            <td>5</td>
+            <td>39</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.08</td>
+            <td>$0.29</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Bruni - Fire Salamander</td>
+            <td>5</td>
+            <td>40</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.13</td>
+            <td>$0.82</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Earth Giant - Living Mountain</td>
+            <td>5</td>
+            <td>41</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.22</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Gale - Wind Spirit</td>
+            <td>5</td>
+            <td>42</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.23</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>White Rabbit - Royal Herald</td>
+            <td>5</td>
+            <td>43</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.28</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Luisa Madrigal - Entertaining Muscle</td>
+            <td>5</td>
+            <td>45</td>
+            <td>Amethyst</td>
+            <td>Rare</td>
+            <td>$0.13</td>
+            <td>$0.33</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Anna - Mystical Majesty</td>
+            <td>5</td>
+            <td>46</td>
+            <td>Amethyst</td>
+            <td>Rare</td>
+            <td>$0.29</td>
+            <td>$2.94</td>
+        </tr>
+        
+        <tr>
+            <td>6</td>
+            <td>0</td>
+            <td>Archimedes - Electrified Owl</td>
+            <td>5</td>
+            <td>47</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.13</td>
+            <td>$0.94</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>Elsa - The Fifth Spirit</td>
+            <td>5</td>
+            <td>48</td>
+            <td>Amethyst</td>
+            <td>Super Rare</td>
+            <td>$4.07</td>
+            <td>$5.69</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Olaf - Happy Passenger</td>
+            <td>5</td>
+            <td>50</td>
+            <td>Amethyst</td>
+            <td>Rare</td>
+            <td>$0.14</td>
+            <td>$0.40</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Maleficent - Vexed Partygoer</td>
+            <td>5</td>
+            <td>51</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.10</td>
+            <td>$0.36</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Monstro - Whale of a Whale</td>
+            <td>5</td>
+            <td>52</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.07</td>
+            <td>$0.42</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Maleficent - Vengeful Sorceress</td>
+            <td>5</td>
+            <td>54</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.10</td>
+            <td>$0.26</td>
+        </tr>
+        
+        <tr>
+            <td>8</td>
+            <td>0</td>
+            <td>Anna - Eager Acolyte</td>
+            <td>5</td>
+            <td>56</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.25</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>King of Hearts - Monarch of Wonderland</td>
+            <td>5</td>
+            <td>57</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.10</td>
+            <td>$0.48</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Hypnotic Strength</td>
+            <td>5</td>
+            <td>59</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.36</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Finders Keepers</td>
+            <td>5</td>
+            <td>60</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.08</td>
+            <td>$0.45</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Gathering Knowledge And Wisdom</td>
+            <td>5</td>
+            <td>62</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.14</td>
+            <td>$0.97</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Retrosphere</td>
+            <td>5</td>
+            <td>64</td>
+            <td>Amethyst</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.16</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Half Hexwell Crown</td>
+            <td>5</td>
+            <td>65</td>
+            <td>Amethyst</td>
+            <td>Rare</td>
+            <td>$0.15</td>
+            <td>$0.33</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Amethyst Chromicon</td>
+            <td>5</td>
+            <td>66</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.30</td>
+            <td>$2.58</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>The Library - A Gift for Belle</td>
+            <td>5</td>
+            <td>68</td>
+            <td>Amethyst</td>
+            <td>Uncommon</td>
+            <td>$0.43</td>
+            <td>$4.44</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Robin Hood - Timely Contestant</td>
+            <td>5</td>
+            <td>69</td>
+            <td>Emerald</td>
+            <td>Rare</td>
+            <td>$0.35</td>
+            <td>$2.07</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Shenzi - Scar's Accomplice</td>
+            <td>5</td>
+            <td>70</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.12</td>
+            <td>$0.52</td>
+        </tr>
+        
+        <tr>
+            <td>7</td>
+            <td>0</td>
+            <td>Little John - Camp Cook</td>
+            <td>5</td>
+            <td>71</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.11</td>
+            <td>$0.32</td>
+        </tr>
+        
+        <tr>
+            <td>8</td>
+            <td>0</td>
+            <td>Zazu - Advisor to Mufasa</td>
+            <td>5</td>
+            <td>72</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>8</td>
+            <td>0</td>
+            <td>Ulf - Mime</td>
+            <td>5</td>
+            <td>73</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.11</td>
+        </tr>
+        
+        <tr>
+            <td>7</td>
+            <td>0</td>
+            <td>Ed - Laughing Hyena</td>
+            <td>5</td>
+            <td>74</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Flora - Good Fairy</td>
+            <td>5</td>
+            <td>75</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.16</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Merryweather - Good Fairy</td>
+            <td>5</td>
+            <td>76</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.16</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Robin Hood - Archery Contestant</td>
+            <td>5</td>
+            <td>77</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.10</td>
+            <td>$0.31</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Fauna - Good Fairy</td>
+            <td>5</td>
+            <td>78</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.16</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Iago - Fake Flamingo</td>
+            <td>5</td>
+            <td>79</td>
+            <td>Emerald</td>
+            <td>Rare</td>
+            <td>$0.13</td>
+            <td>$0.47</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Ed - Hysterical Partygoer</td>
+            <td>5</td>
+            <td>81</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.12</td>
+            <td>$0.40</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Prince Phillip - Swordsman of the Realm</td>
+            <td>5</td>
+            <td>83</td>
+            <td>Emerald</td>
+            <td>Super Rare</td>
+            <td>$0.24</td>
+            <td>$1.81</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Clarabelle - Clumsy Guest</td>
+            <td>5</td>
+            <td>86</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.08</td>
+            <td>$0.29</td>
+        </tr>
+        
+        <tr>
+            <td>9</td>
+            <td>0</td>
+            <td>Banzai - Taunting Hyena</td>
+            <td>5</td>
+            <td>87</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.09</td>
+            <td>$0.15</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Robin Hood - Sneaky Sleuth</td>
+            <td>5</td>
+            <td>88</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.18</td>
+            <td>$0.84</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Shenzi - Head Hyena</td>
+            <td>5</td>
+            <td>91</td>
+            <td>Emerald</td>
+            <td>Rare</td>
+            <td>$0.19</td>
+            <td>$0.62</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>Scar - Vengeful Lion</td>
+            <td>5</td>
+            <td>93</td>
+            <td>Emerald</td>
+            <td>Rare</td>
+            <td>$0.31</td>
+            <td>$1.41</td>
+        </tr>
+        
+        <tr>
+            <td>9</td>
+            <td>0</td>
+            <td>Hypnotic Deduction</td>
+            <td>5</td>
+            <td>94</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.32</td>
+        </tr>
+        
+        <tr>
+            <td>7</td>
+            <td>0</td>
+            <td>Night Howler Rage</td>
+            <td>5</td>
+            <td>95</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>You're Welcome</td>
+            <td>5</td>
+            <td>96</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.28</td>
+            <td>$2.76</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Prince John's Mirror</td>
+            <td>5</td>
+            <td>98</td>
+            <td>Emerald</td>
+            <td>Rare</td>
+            <td>$1.23</td>
+            <td>$3.55</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Obscurosphere</td>
+            <td>5</td>
+            <td>99</td>
+            <td>Emerald</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.20</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Emerald Chromicon</td>
+            <td>5</td>
+            <td>100</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.18</td>
+            <td>$1.77</td>
+        </tr>
+        
+        <tr>
+            <td>7</td>
+            <td>0</td>
+            <td>Tropical Rainforest - Jaguar Lair</td>
+            <td>5</td>
+            <td>102</td>
+            <td>Emerald</td>
+            <td>Uncommon</td>
+            <td>$0.10</td>
+            <td>$0.28</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Taffyta Muttonfudge - Ruthless Rival</td>
+            <td>5</td>
+            <td>103</td>
+            <td>Ruby</td>
+            <td>Uncommon</td>
+            <td>$0.09</td>
+            <td>$0.26</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Turbo - Royal Hack</td>
+            <td>5</td>
+            <td>106</td>
+            <td>Ruby</td>
+            <td>Uncommon</td>
+            <td>$0.11</td>
+            <td>$0.35</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Rancis Fluggerbutter - Chocolate Charger</td>
+            <td>5</td>
+            <td>108</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.12</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Scar - Betrayer</td>
+            <td>5</td>
+            <td>109</td>
+            <td>Ruby</td>
+            <td>Uncommon</td>
+            <td>$0.09</td>
+            <td>$0.30</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Snowanna Rainbeau - Cool Competitor</td>
+            <td>5</td>
+            <td>110</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>6</td>
+            <td>0</td>
+            <td>Daisy Duck - Spotless Food-Fighter</td>
+            <td>5</td>
+            <td>111</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Mickey Mouse - Enthusiastic Dancer</td>
+            <td>5</td>
+            <td>112</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.22</td>
+        </tr>
+        
+        <tr>
+            <td>8</td>
+            <td>0</td>
+            <td>Taffyta Muttonfudge - Crowd Favorite</td>
+            <td>5</td>
+            <td>114</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.08</td>
+            <td>$0.25</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Denahi - Avenging Brother</td>
+            <td>5</td>
+            <td>115</td>
+            <td>Ruby</td>
+            <td>Rare</td>
+            <td>$0.15</td>
+            <td>$0.30</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Pete - Steamboat Rival</td>
+            <td>5</td>
+            <td>116</td>
+            <td>Ruby</td>
+            <td>Super Rare</td>
+            <td>$0.20</td>
+            <td>$2.51</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Taffyta Muttonfudge - Sour Speedster</td>
+            <td>5</td>
+            <td>117</td>
+            <td>Ruby</td>
+            <td>Uncommon</td>
+            <td>$0.17</td>
+            <td>$0.60</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Pete - Pastry Chomper</td>
+            <td>5</td>
+            <td>120</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.15</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Arthur - Novice Sparrow</td>
+            <td>5</td>
+            <td>121</td>
+            <td>Ruby</td>
+            <td>Uncommon</td>
+            <td>$0.07</td>
+            <td>$0.49</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Ratigan - Party Crasher</td>
+            <td>5</td>
+            <td>123</td>
+            <td>Ruby</td>
+            <td>Rare</td>
+            <td>$0.22</td>
+            <td>$0.86</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Vanellope Von Schweetz - Random Roster Racer</td>
+            <td>5</td>
+            <td>124</td>
+            <td>Ruby</td>
+            <td>Rare</td>
+            <td>$0.17</td>
+            <td>$2.24</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Simba - Adventurous Successor</td>
+            <td>5</td>
+            <td>125</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.24</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Minnie Mouse - Dazzling Dancer</td>
+            <td>5</td>
+            <td>126</td>
+            <td>Ruby</td>
+            <td>Uncommon</td>
+            <td>$0.08</td>
+            <td>$0.29</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Break Free</td>
+            <td>5</td>
+            <td>127</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.13</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Evil Comes Prepared</td>
+            <td>5</td>
+            <td>128</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.27</td>
+        </tr>
+        
+        <tr>
+            <td>8</td>
+            <td>0</td>
+            <td>Glimmer vs Glimmer</td>
+            <td>5</td>
+            <td>130</td>
+            <td>Ruby</td>
+            <td>Uncommon</td>
+            <td>$0.07</td>
+            <td>$0.41</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Who's With Me?</td>
+            <td>5</td>
+            <td>131</td>
+            <td>Ruby</td>
+            <td>Super Rare</td>
+            <td>$0.23</td>
+            <td>$0.63</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Potion of Might</td>
+            <td>5</td>
+            <td>132</td>
+            <td>Ruby</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>The Sword Released</td>
+            <td>5</td>
+            <td>133</td>
+            <td>Ruby</td>
+            <td>Rare</td>
+            <td>$0.18</td>
+            <td>$1.97</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Ruby Chromicon</td>
+            <td>5</td>
+            <td>134</td>
+            <td>Ruby</td>
+            <td>Uncommon</td>
+            <td>$0.22</td>
+            <td>$1.40</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Ratigan's Party - Seedy Back Room</td>
+            <td>5</td>
+            <td>136</td>
+            <td>Ruby</td>
+            <td>Uncommon</td>
+            <td>$0.10</td>
+            <td>$0.98</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>King Candy - Sovereign of Sugar</td>
+            <td>5</td>
+            <td>137</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.22</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Chaca - Impressive Daughter</td>
+            <td>5</td>
+            <td>138</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.20</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>The Queen - Cruelest of All</td>
+            <td>5</td>
+            <td>139</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.08</td>
+            <td>$0.24</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Scrooge McDuck - Afficionado of Antiquities</td>
+            <td>5</td>
+            <td>140</td>
+            <td>Sapphire</td>
+            <td>Rare</td>
+            <td>$0.13</td>
+            <td>$0.48</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Prince John - Opportunistic Briber</td>
+            <td>5</td>
+            <td>141</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.19</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Merlin - Back from Bermuda</td>
+            <td>5</td>
+            <td>142</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.08</td>
+            <td>$0.16</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>The Queen - Fairest of All</td>
+            <td>5</td>
+            <td>144</td>
+            <td>Sapphire</td>
+            <td>Super Rare</td>
+            <td>$0.40</td>
+            <td>$1.24</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>The Queen - Crown of the Council</td>
+            <td>5</td>
+            <td>148</td>
+            <td>Sapphire</td>
+            <td>Rare</td>
+            <td>$0.22</td>
+            <td>$0.64</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Ludwig Von Drake - Self-Proclaimed Genius</td>
+            <td>5</td>
+            <td>151</td>
+            <td>Sapphire</td>
+            <td>Uncommon</td>
+            <td>$0.09</td>
+            <td>$0.33</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Minnie Mouse - Quick-Thinking Inventor</td>
+            <td>5</td>
+            <td>152</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.21</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Basil - Practiced Detective</td>
+            <td>5</td>
+            <td>153</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.11</td>
+            <td>$0.21</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>King Candy - Sweet Abomination</td>
+            <td>5</td>
+            <td>154</td>
+            <td>Sapphire</td>
+            <td>Uncommon</td>
+            <td>$0.10</td>
+            <td>$0.36</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Donald Duck - Focused Flatfoot</td>
+            <td>5</td>
+            <td>155</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.10</td>
+            <td>$1.31</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Tanana - Wise Woman</td>
+            <td>5</td>
+            <td>156</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.03</td>
+            <td>$0.18</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Tipo - Growing Son</td>
+            <td>5</td>
+            <td>157</td>
+            <td>Sapphire</td>
+            <td>Uncommon</td>
+            <td>$0.40</td>
+            <td>$4.51</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Belle - Of the Ball</td>
+            <td>5</td>
+            <td>158</td>
+            <td>Sapphire</td>
+            <td>Rare</td>
+            <td>$0.19</td>
+            <td>$0.73</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Vision of the Future</td>
+            <td>5</td>
+            <td>160</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.12</td>
+            <td>$0.71</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Ever as Before</td>
+            <td>5</td>
+            <td>162</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.22</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Hide Away</td>
+            <td>5</td>
+            <td>163</td>
+            <td>Sapphire</td>
+            <td>Uncommon</td>
+            <td>$0.13</td>
+            <td>$1.55</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>All Funned Out</td>
+            <td>5</td>
+            <td>164</td>
+            <td>Sapphire</td>
+            <td>Uncommon</td>
+            <td>$0.10</td>
+            <td>$0.65</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Medal of Heroes</td>
+            <td>5</td>
+            <td>165</td>
+            <td>Sapphire</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.24</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Merlin's Carpetbag</td>
+            <td>5</td>
+            <td>167</td>
+            <td>Sapphire</td>
+            <td>Uncommon</td>
+            <td>$0.09</td>
+            <td>$0.49</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Sapphire Chromicon</td>
+            <td>5</td>
+            <td>168</td>
+            <td>Sapphire</td>
+            <td>Uncommon</td>
+            <td>$0.10</td>
+            <td>$0.37</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Merlin's Cottage - The Wizard's Home</td>
+            <td>5</td>
+            <td>170</td>
+            <td>Sapphire</td>
+            <td>Uncommon</td>
+            <td>$0.07</td>
+            <td>$0.42</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Stitch - Team Underdog</td>
+            <td>5</td>
+            <td>171</td>
+            <td>Steel</td>
+            <td>Uncommon</td>
+            <td>$0.11</td>
+            <td>$0.25</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Jafar - Tyrannical Hypnotist</td>
+            <td>5</td>
+            <td>172</td>
+            <td>Steel</td>
+            <td>Legendary</td>
+            <td>$4.48</td>
+            <td>$7.74</td>
+        </tr>
+        
+        <tr>
+            <td>9</td>
+            <td>0</td>
+            <td>Simba - Lost Prince</td>
+            <td>5</td>
+            <td>173</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.08</td>
+            <td>$0.22</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Rudy - Groove Disrupter</td>
+            <td>5</td>
+            <td>174</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.14</td>
+        </tr>
+        
+        <tr>
+            <td>6</td>
+            <td>0</td>
+            <td>Royal Guard - Bovine Protector</td>
+            <td>5</td>
+            <td>175</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.04</td>
+            <td>$0.13</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Mickey Mouse - Food Fight Defender</td>
+            <td>5</td>
+            <td>176</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.10</td>
+            <td>$0.53</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Sleepy - Sluggish Knight</td>
+            <td>5</td>
+            <td>177</td>
+            <td>Steel</td>
+            <td>Uncommon</td>
+            <td>$0.14</td>
+            <td>$0.43</td>
+        </tr>
+        
+        <tr>
+            <td>7</td>
+            <td>0</td>
+            <td>Kronk - Unlicensed Investigator</td>
+            <td>5</td>
+            <td>178</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.15</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>HeiHei - Protective Rooster</td>
+            <td>5</td>
+            <td>179</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.07</td>
+            <td>$0.17</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Sneezy - Noisy Knight</td>
+            <td>5</td>
+            <td>180</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.10</td>
+            <td>$0.25</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Dopey - Knight Apprentice</td>
+            <td>5</td>
+            <td>181</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.08</td>
+            <td>$0.20</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Snow White - Fair-Hearted</td>
+            <td>5</td>
+            <td>183</td>
+            <td>Steel</td>
+            <td>Super Rare</td>
+            <td>$0.79</td>
+            <td>$1.16</td>
+        </tr>
+        
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>Kronk - Head of Security</td>
+            <td>5</td>
+            <td>185</td>
+            <td>Steel</td>
+            <td>Super Rare</td>
+            <td>$0.25</td>
+            <td>$0.65</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Grumpy - Skeptical Knight</td>
+            <td>5</td>
+            <td>186</td>
+            <td>Steel</td>
+            <td>Super Rare</td>
+            <td>$0.39</td>
+            <td>$1.14</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Sir Ector - Castle Lord</td>
+            <td>5</td>
+            <td>188</td>
+            <td>Steel</td>
+            <td>Rare</td>
+            <td>$0.12</td>
+            <td>$0.40</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Bashful - Adoring Knight</td>
+            <td>5</td>
+            <td>189</td>
+            <td>Steel</td>
+            <td>Uncommon</td>
+            <td>$0.10</td>
+            <td>$0.32</td>
+        </tr>
+        
+        <tr>
+            <td>7</td>
+            <td>0</td>
+            <td>Arthur - Wart</td>
+            <td>5</td>
+            <td>190</td>
+            <td>Steel</td>
+            <td>Uncommon</td>
+            <td>$0.07</td>
+            <td>$0.27</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Happy - Lively Knight</td>
+            <td>5</td>
+            <td>191</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.12</td>
+            <td>$0.30</td>
+        </tr>
+        
+        <tr>
+            <td>7</td>
+            <td>0</td>
+            <td>Simba - Son of Mufasa</td>
+            <td>5</td>
+            <td>192</td>
+            <td>Steel</td>
+            <td>Uncommon</td>
+            <td>$0.18</td>
+            <td>$1.38</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Doc - Bold Knight</td>
+            <td>5</td>
+            <td>193</td>
+            <td>Steel</td>
+            <td>Rare</td>
+            <td>$0.77</td>
+            <td>$1.60</td>
+        </tr>
+        
+        <tr>
+            <td>7</td>
+            <td>0</td>
+            <td>Pete - Games Referee</td>
+            <td>5</td>
+            <td>195</td>
+            <td>Steel</td>
+            <td>Uncommon</td>
+            <td>$0.81</td>
+            <td>$8.01</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Tug-of-War</td>
+            <td>5</td>
+            <td>196</td>
+            <td>Steel</td>
+            <td>Rare</td>
+            <td>$0.21</td>
+            <td>$0.47</td>
+        </tr>
+        
+        <tr>
+            <td>9</td>
+            <td>0</td>
+            <td>When Will My Life Begin?</td>
+            <td>5</td>
+            <td>197</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.08</td>
+            <td>$0.25</td>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>0</td>
+            <td>Duck for Cover!</td>
+            <td>5</td>
+            <td>198</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.05</td>
+            <td>$0.23</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>0</td>
+            <td>Food Fight!</td>
+            <td>5</td>
+            <td>199</td>
+            <td>Steel</td>
+            <td>Uncommon</td>
+            <td>$0.08</td>
+            <td>$0.40</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Shield of Arendelle</td>
+            <td>5</td>
+            <td>200</td>
+            <td>Steel</td>
+            <td>Common</td>
+            <td>$0.06</td>
+            <td>$0.13</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>0</td>
+            <td>Plate Armor</td>
+            <td>5</td>
+            <td>201</td>
+            <td>Steel</td>
+            <td>Rare</td>
+            <td>$0.14</td>
+            <td>$0.25</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Steel Chromicon</td>
+            <td>5</td>
+            <td>202</td>
+            <td>Steel</td>
+            <td>Uncommon</td>
+            <td>$0.08</td>
+            <td>$0.31</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>Bad-Anon - Villain Support Center</td>
+            <td>5</td>
+            <td>203</td>
+            <td>Steel</td>
+            <td>Rare</td>
+            <td>$0.14</td>
+            <td>$1.78</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>0</td>
+            <td>Seven Dwarfs' Mine - Secure Fortress</td>
+            <td>5</td>
+            <td>204</td>
+            <td>Steel</td>
+            <td>Uncommon</td>
+            <td>$0.13</td>
+            <td>$0.44</td>
+        </tr>
+        
+    </tbody>
+</table>
+
+</body>
+</html>
