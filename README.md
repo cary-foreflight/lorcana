@@ -1,2 +1,0 @@
-# lorcana
-Lorcana collection extras
